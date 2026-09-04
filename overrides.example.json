@@ -1,0 +1,18 @@
+{
+  "_comment": [
+    "Human-confirmed matches between BambooHR employees and Harvest users.",
+    "Copy to overrides.json. Only add an entry after YOU have verified the",
+    "pairing -- this file is the one way a match can be made without an",
+    "exact work-email match, and a wrong entry adjusts the wrong person's",
+    "balance. 'confirmed_by' is required and is the audit trail."
+  ],
+  "manual_matches": [
+    {
+      "bamboo_employee_id": "142",
+      "harvest_user_id": 987654,
+      "confirmed_by": "cschrader",
+      "confirmed_on": "2026-09-04",
+      "note": "Harvest account is under a personal address from before the domain migration"
+    }
+  ]
+}

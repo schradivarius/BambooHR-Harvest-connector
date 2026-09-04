@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pto-reconciliation"
+version = "1.0.0"
+description = "Deterministic BambooHR <-> Harvest PTO balance reconciliation"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "responses>=0.24",
+]
+advisory = [
+    "anthropic>=0.40",
+]
+
+[project.scripts]
+pto-reconcile = "pto_recon.cli:main"
+pto-advise = "pto_advisory.advise:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
